@@ -15,9 +15,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Unpack supplied project
-        run: unzip -q anime-apk.zip
-
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
