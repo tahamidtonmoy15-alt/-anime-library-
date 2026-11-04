@@ -45,7 +45,7 @@ jobs:
           cp android-overlay/ExternalPlayerPlugin.java android-overlay/MainActivity.java "$PKG/"
           mkdir -p android/app/src/main/res/xml
           cp android-overlay/file_paths.xml android/app/src/main/res/xml/file_paths.xml
-          python3 android-overlay/add_provider.py
+          grep -q "fileprovider" android/app/src/main/AndroidManifest.xml || python3 android-overlay/add_provider.py
 
       - name: Sync Capacitor
         working-directory: anime-apk
